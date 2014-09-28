@@ -13,29 +13,38 @@
 @implementation ALAssetsGroup (CameraRoll)
 
 - (void)virtual_enumerateAssetsUsingBlock:(ALAssetsGroupEnumerationResultsBlock)enumerationBlock {
-    ALAssetsGroupType type = [[self valueForProperty:ALAssetsGroupPropertyType] longValue];
-    if(type != ALAssetsGroupSavedPhotos) { // If not Camera Roll
-        // Because `- enumerateAssetsUsingBlock:` is hooked.
-        [self enumerateAssetsWithOptions:NSEnumerationConcurrent usingBlock:enumerationBlock];
+    if([self isCameraRoll]) {
+        [self enumerateAllAssetsUsingBlock:enumerationBlock];
         return;
     }
     
-    [self enumerateAllAssetsUsingBlock:enumerationBlock];
+    // Because `- enumerateAssetsUsingBlock:` is swizzled.
+    // I know it is not good :/
+    // TODO
+    [self enumerateAssetsWithOptions:NSEnumerationConcurrent usingBlock:enumerationBlock];
 }
 
 - (NSInteger)virtual_numberOfAssets {
-    PHFetchResult *result = [PHAsset fetchAssetsWithOptions:nil];
-    return result.count;
+    return [self allAssets].count;
 }
 
 # pragma mark - Helpers
 
+- (BOOL)isCameraRoll {
+    ALAssetsGroupType type = [[self valueForProperty:ALAssetsGroupPropertyType] longValue];
+    return (type == ALAssetsGroupSavedPhotos);
+}
+
 - (void)enumerateAllAssetsUsingBlock:(ALAssetsGroupEnumerationResultsBlock)enumerationBlock {
     PHFetchResult *result = [PHAsset fetchAssetsWithOptions:nil];
     [result enumerateObjectsUsingBlock:^(PHAsset *photoAsset, NSUInteger idx, BOOL *stop) {
-        ALAsset *asset = (ALAsset *)photoAsset;
+        ALAsset *asset = (ALAsset *)photoAsset; // TODO: I know it is not good :/
         enumerationBlock(asset, idx, stop);
     }];
+}
+
+- (PHFetchResult *)allAssets {
+    return [PHAsset fetchAssetsWithOptions:nil];
 }
 
 @end

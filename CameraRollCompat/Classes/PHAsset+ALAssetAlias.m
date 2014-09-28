@@ -30,7 +30,7 @@
     return imageRef;
 }
 
-#warning TODO: Avoid DRY
+#warning TODO: DRY
 - (CGImageRef)aspectFitThumbnail {
     __block CGImageRef imageRef = nil;
     
