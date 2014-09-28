@@ -1,528 +1,1254 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		3C0FC0064B97B0E92EF6DE8E /* libPods-CameraRollCompat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8522B4DD312534A0148CC41 /* libPods-CameraRollCompat.a */; };
-		D4CD4F7519D58B3E003D8600 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CD4F7419D58B3E003D8600 /* main.m */; };
-		D4CD4F7819D58B3E003D8600 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CD4F7719D58B3E003D8600 /* AppDelegate.m */; };
-		D4CD4F7B19D58B3E003D8600 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CD4F7A19D58B3E003D8600 /* ViewController.m */; };
-		D4CD4F7E19D58B3E003D8600 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4CD4F7C19D58B3E003D8600 /* Main.storyboard */; };
-		D4CD4F8019D58B3E003D8600 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CD4F7F19D58B3E003D8600 /* Images.xcassets */; };
-		D4CD4F8319D58B3E003D8600 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4CD4F8119D58B3E003D8600 /* LaunchScreen.xib */; };
-		D4CD4F8F19D58B3E003D8600 /* CameraRollCompatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CD4F8E19D58B3E003D8600 /* CameraRollCompatTests.m */; };
-		D4CD4F9B19D58C03003D8600 /* ALAssetsLibrary+CameraRoll.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CD4F9A19D58C03003D8600 /* ALAssetsLibrary+CameraRoll.m */; };
-		D4CD4F9E19D58DDB003D8600 /* ALAssetsGroup+CameraRoll.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CD4F9D19D58DDB003D8600 /* ALAssetsGroup+CameraRoll.m */; };
-		D4CD4FA119D596E3003D8600 /* PHAsset+ALAssetAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CD4FA019D596E3003D8600 /* PHAsset+ALAssetAlias.m */; };
-		D4CD4FA419D59AAD003D8600 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CD4FA319D59AAD003D8600 /* NSObject+Swizzle.m */; };
-		D4CD4FA719D59CE3003D8600 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CD4FA619D59CE3003D8600 /* CollectionViewCell.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D4CD4F8919D58B3E003D8600 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4CD4F6719D58B3E003D8600 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4CD4F6E19D58B3E003D8600;
-			remoteInfo = CameraRollCompat;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		A8522B4DD312534A0148CC41 /* libPods-CameraRollCompat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CameraRollCompat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4CD4F6F19D58B3E003D8600 /* CameraRollCompat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraRollCompat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4CD4F7319D58B3E003D8600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4CD4F7419D58B3E003D8600 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D4CD4F7619D58B3E003D8600 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D4CD4F7719D58B3E003D8600 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D4CD4F7919D58B3E003D8600 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D4CD4F7A19D58B3E003D8600 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D4CD4F7D19D58B3E003D8600 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D4CD4F7F19D58B3E003D8600 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D4CD4F8219D58B3E003D8600 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D4CD4F8819D58B3E003D8600 /* CameraRollCompatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraRollCompatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4CD4F8D19D58B3E003D8600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4CD4F8E19D58B3E003D8600 /* CameraRollCompatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraRollCompatTests.m; sourceTree = "<group>"; };
-		D4CD4F9919D58C03003D8600 /* ALAssetsLibrary+CameraRoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CameraRoll.h"; sourceTree = "<group>"; };
-		D4CD4F9A19D58C03003D8600 /* ALAssetsLibrary+CameraRoll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CameraRoll.m"; sourceTree = "<group>"; };
-		D4CD4F9C19D58DDB003D8600 /* ALAssetsGroup+CameraRoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsGroup+CameraRoll.h"; sourceTree = "<group>"; };
-		D4CD4F9D19D58DDB003D8600 /* ALAssetsGroup+CameraRoll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsGroup+CameraRoll.m"; sourceTree = "<group>"; };
-		D4CD4F9F19D596E3003D8600 /* PHAsset+ALAssetAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+ALAssetAlias.h"; sourceTree = "<group>"; };
-		D4CD4FA019D596E3003D8600 /* PHAsset+ALAssetAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+ALAssetAlias.m"; sourceTree = "<group>"; };
-		D4CD4FA219D59AAD003D8600 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
-		D4CD4FA319D59AAD003D8600 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
-		D4CD4FA519D59CE3003D8600 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
-		D4CD4FA619D59CE3003D8600 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
-		EAFE57307922D81CB17BC24A /* Pods-CameraRollCompat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraRollCompat.release.xcconfig"; path = "Pods/Target Support Files/Pods-CameraRollCompat/Pods-CameraRollCompat.release.xcconfig"; sourceTree = "<group>"; };
-		EDD08DB5EC81BAAADB36B3D3 /* Pods-CameraRollCompat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraRollCompat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CameraRollCompat/Pods-CameraRollCompat.debug.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		D4CD4F6C19D58B3E003D8600 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C0FC0064B97B0E92EF6DE8E /* libPods-CameraRollCompat.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4CD4F8519D58B3E003D8600 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		76F41A6C1ED8E49AFAEC3E0C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A8522B4DD312534A0148CC41 /* libPods-CameraRollCompat.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9F0D25366C4886A4FDDE5277 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EDD08DB5EC81BAAADB36B3D3 /* Pods-CameraRollCompat.debug.xcconfig */,
-				EAFE57307922D81CB17BC24A /* Pods-CameraRollCompat.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D4CD4F6619D58B3E003D8600 = {
-			isa = PBXGroup;
-			children = (
-				D4CD4F7119D58B3E003D8600 /* CameraRollCompat */,
-				D4CD4F8B19D58B3E003D8600 /* CameraRollCompatTests */,
-				D4CD4F7019D58B3E003D8600 /* Products */,
-				9F0D25366C4886A4FDDE5277 /* Pods */,
-				76F41A6C1ED8E49AFAEC3E0C /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		D4CD4F7019D58B3E003D8600 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D4CD4F6F19D58B3E003D8600 /* CameraRollCompat.app */,
-				D4CD4F8819D58B3E003D8600 /* CameraRollCompatTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D4CD4F7119D58B3E003D8600 /* CameraRollCompat */ = {
-			isa = PBXGroup;
-			children = (
-				D4CD4F9819D58BDD003D8600 /* Classes */,
-				D4CD4F7619D58B3E003D8600 /* AppDelegate.h */,
-				D4CD4F7719D58B3E003D8600 /* AppDelegate.m */,
-				D4CD4F7919D58B3E003D8600 /* ViewController.h */,
-				D4CD4F7A19D58B3E003D8600 /* ViewController.m */,
-				D4CD4FA519D59CE3003D8600 /* CollectionViewCell.h */,
-				D4CD4FA619D59CE3003D8600 /* CollectionViewCell.m */,
-				D4CD4F7C19D58B3E003D8600 /* Main.storyboard */,
-				D4CD4F7F19D58B3E003D8600 /* Images.xcassets */,
-				D4CD4F8119D58B3E003D8600 /* LaunchScreen.xib */,
-				D4CD4F7219D58B3E003D8600 /* Supporting Files */,
-			);
-			path = CameraRollCompat;
-			sourceTree = "<group>";
-		};
-		D4CD4F7219D58B3E003D8600 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D4CD4F7319D58B3E003D8600 /* Info.plist */,
-				D4CD4F7419D58B3E003D8600 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D4CD4F8B19D58B3E003D8600 /* CameraRollCompatTests */ = {
-			isa = PBXGroup;
-			children = (
-				D4CD4F8E19D58B3E003D8600 /* CameraRollCompatTests.m */,
-				D4CD4F8C19D58B3E003D8600 /* Supporting Files */,
-			);
-			path = CameraRollCompatTests;
-			sourceTree = "<group>";
-		};
-		D4CD4F8C19D58B3E003D8600 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D4CD4F8D19D58B3E003D8600 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D4CD4F9819D58BDD003D8600 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				D4CD4F9919D58C03003D8600 /* ALAssetsLibrary+CameraRoll.h */,
-				D4CD4F9A19D58C03003D8600 /* ALAssetsLibrary+CameraRoll.m */,
-				D4CD4F9C19D58DDB003D8600 /* ALAssetsGroup+CameraRoll.h */,
-				D4CD4F9D19D58DDB003D8600 /* ALAssetsGroup+CameraRoll.m */,
-				D4CD4F9F19D596E3003D8600 /* PHAsset+ALAssetAlias.h */,
-				D4CD4FA019D596E3003D8600 /* PHAsset+ALAssetAlias.m */,
-				D4CD4FA219D59AAD003D8600 /* NSObject+Swizzle.h */,
-				D4CD4FA319D59AAD003D8600 /* NSObject+Swizzle.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		D4CD4F6E19D58B3E003D8600 /* CameraRollCompat */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4CD4F9219D58B3E003D8600 /* Build configuration list for PBXNativeTarget "CameraRollCompat" */;
-			buildPhases = (
-				F583227261325E15A1CEDCE8 /* Check Pods Manifest.lock */,
-				D4CD4F6B19D58B3E003D8600 /* Sources */,
-				D4CD4F6C19D58B3E003D8600 /* Frameworks */,
-				D4CD4F6D19D58B3E003D8600 /* Resources */,
-				E62D45799BC6EF98076CE46D /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CameraRollCompat;
-			productName = CameraRollCompat;
-			productReference = D4CD4F6F19D58B3E003D8600 /* CameraRollCompat.app */;
-			productType = "com.apple.product-type.application";
-		};
-		D4CD4F8719D58B3E003D8600 /* CameraRollCompatTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4CD4F9519D58B3E003D8600 /* Build configuration list for PBXNativeTarget "CameraRollCompatTests" */;
-			buildPhases = (
-				D4CD4F8419D58B3E003D8600 /* Sources */,
-				D4CD4F8519D58B3E003D8600 /* Frameworks */,
-				D4CD4F8619D58B3E003D8600 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D4CD4F8A19D58B3E003D8600 /* PBXTargetDependency */,
-			);
-			name = CameraRollCompatTests;
-			productName = CameraRollCompatTests;
-			productReference = D4CD4F8819D58B3E003D8600 /* CameraRollCompatTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D4CD4F6719D58B3E003D8600 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = kaiinui;
-				TargetAttributes = {
-					D4CD4F6E19D58B3E003D8600 = {
-						CreatedOnToolsVersion = 6.0;
-					};
-					D4CD4F8719D58B3E003D8600 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = D4CD4F6E19D58B3E003D8600;
-					};
-				};
-			};
-			buildConfigurationList = D4CD4F6A19D58B3E003D8600 /* Build configuration list for PBXProject "CameraRollCompat" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = D4CD4F6619D58B3E003D8600;
-			productRefGroup = D4CD4F7019D58B3E003D8600 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				D4CD4F6E19D58B3E003D8600 /* CameraRollCompat */,
-				D4CD4F8719D58B3E003D8600 /* CameraRollCompatTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		D4CD4F6D19D58B3E003D8600 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4CD4F7E19D58B3E003D8600 /* Main.storyboard in Resources */,
-				D4CD4F8319D58B3E003D8600 /* LaunchScreen.xib in Resources */,
-				D4CD4F8019D58B3E003D8600 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4CD4F8619D58B3E003D8600 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E62D45799BC6EF98076CE46D /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CameraRollCompat/Pods-CameraRollCompat-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F583227261325E15A1CEDCE8 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		D4CD4F6B19D58B3E003D8600 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4CD4FA419D59AAD003D8600 /* NSObject+Swizzle.m in Sources */,
-				D4CD4F9E19D58DDB003D8600 /* ALAssetsGroup+CameraRoll.m in Sources */,
-				D4CD4F7B19D58B3E003D8600 /* ViewController.m in Sources */,
-				D4CD4F9B19D58C03003D8600 /* ALAssetsLibrary+CameraRoll.m in Sources */,
-				D4CD4F7819D58B3E003D8600 /* AppDelegate.m in Sources */,
-				D4CD4F7519D58B3E003D8600 /* main.m in Sources */,
-				D4CD4FA719D59CE3003D8600 /* CollectionViewCell.m in Sources */,
-				D4CD4FA119D596E3003D8600 /* PHAsset+ALAssetAlias.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4CD4F8419D58B3E003D8600 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4CD4F8F19D58B3E003D8600 /* CameraRollCompatTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D4CD4F8A19D58B3E003D8600 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4CD4F6E19D58B3E003D8600 /* CameraRollCompat */;
-			targetProxy = D4CD4F8919D58B3E003D8600 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D4CD4F7C19D58B3E003D8600 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4CD4F7D19D58B3E003D8600 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D4CD4F8119D58B3E003D8600 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4CD4F8219D58B3E003D8600 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		D4CD4F9019D58B3E003D8600 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		D4CD4F9119D58B3E003D8600 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D4CD4F9319D58B3E003D8600 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDD08DB5EC81BAAADB36B3D3 /* Pods-CameraRollCompat.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CameraRollCompat/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		D4CD4F9419D58B3E003D8600 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAFE57307922D81CB17BC24A /* Pods-CameraRollCompat.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CameraRollCompat/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		D4CD4F9619D58B3E003D8600 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CameraRollCompatTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraRollCompat.app/CameraRollCompat";
-			};
-			name = Debug;
-		};
-		D4CD4F9719D58B3E003D8600 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CameraRollCompatTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraRollCompat.app/CameraRollCompat";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		D4CD4F6A19D58B3E003D8600 /* Build configuration list for PBXProject "CameraRollCompat" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4CD4F9019D58B3E003D8600 /* Debug */,
-				D4CD4F9119D58B3E003D8600 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4CD4F9219D58B3E003D8600 /* Build configuration list for PBXNativeTarget "CameraRollCompat" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4CD4F9319D58B3E003D8600 /* Debug */,
-				D4CD4F9419D58B3E003D8600 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4CD4F9519D58B3E003D8600 /* Build configuration list for PBXNativeTarget "CameraRollCompatTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4CD4F9619D58B3E003D8600 /* Debug */,
-				D4CD4F9719D58B3E003D8600 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D4CD4F6719D58B3E003D8600 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>1969AB32EB207373B2C4E5EB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-CameraRollCompatTests/Pods-CameraRollCompatTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>401D38970FBBE8A98A7C0570</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-CameraRollCompatTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-CameraRollCompatTests/Pods-CameraRollCompatTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>47384C196A48BD92FF7061F7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-CameraRollCompatTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-CameraRollCompatTests/Pods-CameraRollCompatTests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>76F41A6C1ED8E49AFAEC3E0C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A8522B4DD312534A0148CC41</string>
+				<string>9F2A873234116D6B096C6552</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>99CC872D661A84B92ED1F025</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>9F0D25366C4886A4FDDE5277</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EDD08DB5EC81BAAADB36B3D3</string>
+				<string>EAFE57307922D81CB17BC24A</string>
+				<string>47384C196A48BD92FF7061F7</string>
+				<string>401D38970FBBE8A98A7C0570</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9F2A873234116D6B096C6552</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-CameraRollCompatTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A8522B4DD312534A0148CC41</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-CameraRollCompat.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D4CD4F6619D58B3E003D8600</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D4CD4F7119D58B3E003D8600</string>
+				<string>D4CD4F8B19D58B3E003D8600</string>
+				<string>D4CD4F7019D58B3E003D8600</string>
+				<string>9F0D25366C4886A4FDDE5277</string>
+				<string>76F41A6C1ED8E49AFAEC3E0C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F6719D58B3E003D8600</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0600</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>kaiinui</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>D4CD4F6E19D58B3E003D8600</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.0</string>
+					</dict>
+					<key>D4CD4F8719D58B3E003D8600</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.0</string>
+						<key>TestTargetID</key>
+						<string>D4CD4F6E19D58B3E003D8600</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>D4CD4F6A19D58B3E003D8600</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>D4CD4F6619D58B3E003D8600</string>
+			<key>productRefGroup</key>
+			<string>D4CD4F7019D58B3E003D8600</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>D4CD4F6E19D58B3E003D8600</string>
+				<string>D4CD4F8719D58B3E003D8600</string>
+			</array>
+		</dict>
+		<key>D4CD4F6A19D58B3E003D8600</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D4CD4F9019D58B3E003D8600</string>
+				<string>D4CD4F9119D58B3E003D8600</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D4CD4F6B19D58B3E003D8600</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D4CD4FA419D59AAD003D8600</string>
+				<string>D4CD4F9E19D58DDB003D8600</string>
+				<string>D4CD4F7B19D58B3E003D8600</string>
+				<string>D4CD4F9B19D58C03003D8600</string>
+				<string>D4CD4F7819D58B3E003D8600</string>
+				<string>D4CD4F7519D58B3E003D8600</string>
+				<string>D4CD4FA719D59CE3003D8600</string>
+				<string>D4CD4FA119D596E3003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D4CD4F6C19D58B3E003D8600</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D4CD4F6D19D58B3E003D8600</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D4CD4F7E19D58B3E003D8600</string>
+				<string>D4CD4F8319D58B3E003D8600</string>
+				<string>D4CD4F8019D58B3E003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D4CD4F6E19D58B3E003D8600</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D4CD4F9219D58B3E003D8600</string>
+			<key>buildPhases</key>
+			<array>
+				<string>F583227261325E15A1CEDCE8</string>
+				<string>D4CD4F6B19D58B3E003D8600</string>
+				<string>D4CD4F6C19D58B3E003D8600</string>
+				<string>D4CD4F6D19D58B3E003D8600</string>
+				<string>E62D45799BC6EF98076CE46D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>CameraRollCompat</string>
+			<key>productName</key>
+			<string>CameraRollCompat</string>
+			<key>productReference</key>
+			<string>D4CD4F6F19D58B3E003D8600</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>D4CD4F6F19D58B3E003D8600</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>CameraRollCompat.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D4CD4F7019D58B3E003D8600</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D4CD4F6F19D58B3E003D8600</string>
+				<string>D4CD4F8819D58B3E003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F7119D58B3E003D8600</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D4CD4F9819D58BDD003D8600</string>
+				<string>D4CD4F7619D58B3E003D8600</string>
+				<string>D4CD4F7719D58B3E003D8600</string>
+				<string>D4CD4F7919D58B3E003D8600</string>
+				<string>D4CD4F7A19D58B3E003D8600</string>
+				<string>D4CD4FA519D59CE3003D8600</string>
+				<string>D4CD4FA619D59CE3003D8600</string>
+				<string>D4CD4F7C19D58B3E003D8600</string>
+				<string>D4CD4F7F19D58B3E003D8600</string>
+				<string>D4CD4F8119D58B3E003D8600</string>
+				<string>D4CD4F7219D58B3E003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>CameraRollCompat</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F7219D58B3E003D8600</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D4CD4F7319D58B3E003D8600</string>
+				<string>D4CD4F7419D58B3E003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F7319D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F7419D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F7519D58B3E003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4F7419D58B3E003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4CD4F7619D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F7719D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F7819D58B3E003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4F7719D58B3E003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4CD4F7919D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F7A19D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F7B19D58B3E003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4F7A19D58B3E003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4CD4F7C19D58B3E003D8600</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D4CD4F7D19D58B3E003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F7D19D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F7E19D58B3E003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4F7C19D58B3E003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4CD4F7F19D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F8019D58B3E003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4F7F19D58B3E003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4CD4F8119D58B3E003D8600</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D4CD4F8219D58B3E003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F8219D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F8319D58B3E003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4F8119D58B3E003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4CD4F8419D58B3E003D8600</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D4CD4F8F19D58B3E003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D4CD4F8519D58B3E003D8600</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F1F778645B39C6055CC1FA6C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D4CD4F8619D58B3E003D8600</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D4CD4F8719D58B3E003D8600</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D4CD4F9519D58B3E003D8600</string>
+			<key>buildPhases</key>
+			<array>
+				<string>99CC872D661A84B92ED1F025</string>
+				<string>D4CD4F8419D58B3E003D8600</string>
+				<string>D4CD4F8519D58B3E003D8600</string>
+				<string>D4CD4F8619D58B3E003D8600</string>
+				<string>1969AB32EB207373B2C4E5EB</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>D4CD4F8A19D58B3E003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>CameraRollCompatTests</string>
+			<key>productName</key>
+			<string>CameraRollCompatTests</string>
+			<key>productReference</key>
+			<string>D4CD4F8819D58B3E003D8600</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>D4CD4F8819D58B3E003D8600</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>CameraRollCompatTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D4CD4F8919D58B3E003D8600</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D4CD4F6719D58B3E003D8600</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>D4CD4F6E19D58B3E003D8600</string>
+			<key>remoteInfo</key>
+			<string>CameraRollCompat</string>
+		</dict>
+		<key>D4CD4F8A19D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>D4CD4F6E19D58B3E003D8600</string>
+			<key>targetProxy</key>
+			<string>D4CD4F8919D58B3E003D8600</string>
+		</dict>
+		<key>D4CD4F8B19D58B3E003D8600</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D4CD4F8E19D58B3E003D8600</string>
+				<string>D4CD4F8C19D58B3E003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>CameraRollCompatTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F8C19D58B3E003D8600</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D4CD4F8D19D58B3E003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F8D19D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F8E19D58B3E003D8600</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>CameraRollCompatTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F8F19D58B3E003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4F8E19D58B3E003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4CD4F9019D58B3E003D8600</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D4CD4F9119D58B3E003D8600</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D4CD4F9219D58B3E003D8600</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D4CD4F9319D58B3E003D8600</string>
+				<string>D4CD4F9419D58B3E003D8600</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D4CD4F9319D58B3E003D8600</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>EDD08DB5EC81BAAADB36B3D3</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>CameraRollCompat/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D4CD4F9419D58B3E003D8600</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>EAFE57307922D81CB17BC24A</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>CameraRollCompat/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D4CD4F9519D58B3E003D8600</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D4CD4F9619D58B3E003D8600</string>
+				<string>D4CD4F9719D58B3E003D8600</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D4CD4F9619D58B3E003D8600</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>47384C196A48BD92FF7061F7</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>CameraRollCompatTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/CameraRollCompat.app/CameraRollCompat</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D4CD4F9719D58B3E003D8600</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>401D38970FBBE8A98A7C0570</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>CameraRollCompatTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/CameraRollCompat.app/CameraRollCompat</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D4CD4F9819D58BDD003D8600</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D4CD4F9919D58C03003D8600</string>
+				<string>D4CD4F9A19D58C03003D8600</string>
+				<string>D4CD4F9C19D58DDB003D8600</string>
+				<string>D4CD4F9D19D58DDB003D8600</string>
+				<string>D4CD4F9F19D596E3003D8600</string>
+				<string>D4CD4FA019D596E3003D8600</string>
+				<string>D4CD4FA219D59AAD003D8600</string>
+				<string>D4CD4FA319D59AAD003D8600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F9919D58C03003D8600</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ALAssetsLibrary+CameraRoll.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F9A19D58C03003D8600</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ALAssetsLibrary+CameraRoll.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F9B19D58C03003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4F9A19D58C03003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4CD4F9C19D58DDB003D8600</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ALAssetsGroup+CameraRoll.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F9D19D58DDB003D8600</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ALAssetsGroup+CameraRoll.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4F9E19D58DDB003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4F9D19D58DDB003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4CD4F9F19D596E3003D8600</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PHAsset+ALAssetAlias.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4FA019D596E3003D8600</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PHAsset+ALAssetAlias.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4FA119D596E3003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4FA019D596E3003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4CD4FA219D59AAD003D8600</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSObject+Swizzle.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4FA319D59AAD003D8600</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSObject+Swizzle.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4FA419D59AAD003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4FA319D59AAD003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4CD4FA519D59CE3003D8600</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>CollectionViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4FA619D59CE3003D8600</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>CollectionViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4CD4FA719D59CE3003D8600</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D4CD4FA619D59CE3003D8600</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E62D45799BC6EF98076CE46D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-CameraRollCompat/Pods-CameraRollCompat-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>EAFE57307922D81CB17BC24A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-CameraRollCompat.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-CameraRollCompat/Pods-CameraRollCompat.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EDD08DB5EC81BAAADB36B3D3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-CameraRollCompat.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-CameraRollCompat/Pods-CameraRollCompat.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F1F778645B39C6055CC1FA6C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9F2A873234116D6B096C6552</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F583227261325E15A1CEDCE8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D4CD4F6719D58B3E003D8600</string>
+</dict>
+</plist>

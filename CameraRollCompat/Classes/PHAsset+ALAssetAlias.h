@@ -11,7 +11,21 @@
 
 @interface PHAsset (ALAssetAlias)
 
+/**
+ *  Returns the thumbnail image of the asset.
+ */
 - (CGImageRef)thumbnail;
+
+/**
+ *  Returns the aspect-fit image of the asset.
+ */
 - (CGImageRef)aspectFitThumbnail;
+
+# pragma mark - Properties (Private)
+
+/**
+ *  !!Private
+ */
+@property (nonatomic, strong) UIImage *thumbnailImage;
 
 @end

@@ -8,30 +8,34 @@
 //
 
 #import "ALAssetsLibrary+CameraRoll.h"
-#import <Aspects.h>
 #import "NSObject+Swizzle.h"
 
 #import "ALAssetsGroup+CameraRoll.h"
 
 @implementation ALAssetsLibrary (CameraRoll)
 
+/**
+ *  Enable Camera Roll Compatibility.
+ *  It hijacks `ALAssetsGroup`'s `- enumerateAssetsUsingBlock:` if the `ALAssetsGroup`'s type is `ALAssetsGroupSavedPhoto` (a.k.a. former Camera Roll), then fallbacks using `PHAsset`.
+ *  It does NOT do anything when OS version is lower than iOS7. (When Camera Roll is available.)
+ */
 - (void)compat_enableCameraRoll {
-#warning If iOS8
+    if ([self isiOS8OrGreater] == NO) { return; }
+    
     [self hijackAssetsGroup];
-#warning Do
-    //[self hijackAsset];
 }
 
 # pragma mark - Helpers
 
 - (void)hijackAssetsGroup {
-    [ALAssetsGroup aspect_hookSelector:@selector(enumerateAssetsUsingBlock:)
-                           withOptions:AspectPositionInstead usingBlock:^(id<AspectInfo> aspectInfo, ALAssetsGroupEnumerationResultsBlock enumerationBlock) {
-                               ALAssetsGroup *group = aspectInfo.instance;
-                               [group virtual_enumerateAssetsUsingBlock:enumerationBlock];
-    } error:NULL];
-    
+    [ALAssetsGroup jr_swizzleMethod:@selector(enumerateAssetsUsingBlock:) withMethod:@selector(virtual_enumerateAssetsUsingBlock:) error:NULL];
     [ALAssetsGroup jr_swizzleMethod:@selector(numberOfAssets) withMethod:@selector(virtual_numberOfAssets) error:NULL];
+}
+
+- (BOOL)isiOS8OrGreater {
+    NSArray *versions = [[[UIDevice currentDevice]systemVersion] componentsSeparatedByString:@"."]; // @"8.0.0"
+    NSInteger versionMajor  = [[versions objectAtIndex:0] intValue];
+    return (versionMajor >= 8);
 }
 
 @end
