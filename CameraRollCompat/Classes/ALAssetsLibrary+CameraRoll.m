@@ -17,7 +17,11 @@
 - (void)compat_enableCameraRoll {
     if ([self isiOS8OrGreater] == NO) { return; }
     
-    [self hijackAssetsGroup];
+    // Avoid calling twice! It will cancel the enchant.
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self hijackAssetsGroup];
+    });
 }
 
 # pragma mark - Helpers
@@ -27,6 +31,7 @@
                          withMethod:@selector(virtual_enumerateAssetsUsingBlock:) error:NULL];
     [ALAssetsGroup jr_swizzleMethod:@selector(numberOfAssets)
                          withMethod:@selector(virtual_numberOfAssets) error:NULL];
+
 }
 
 - (BOOL)isiOS8OrGreater {

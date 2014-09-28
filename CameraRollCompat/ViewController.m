@@ -22,13 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    /*
     
     self.assets = [[NSMutableArray alloc] init];
     
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    [library compat_enableCameraRoll];
     [library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
-        NSLog(@"%d", group.numberOfAssets);
+        NSLog(@"%ld", group.numberOfAssets);
         if (group.numberOfAssets == 0) {
             [self.collectionView reloadData];
             return;
@@ -39,7 +39,6 @@
         }];
     } failureBlock:NULL];
     
-     */
     // Do any additional setup after loading the view, typically from a nib.
 }
 
