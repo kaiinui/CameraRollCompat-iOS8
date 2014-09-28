@@ -14,11 +14,6 @@
 
 @implementation ALAssetsLibrary (CameraRoll)
 
-/**
- *  Enable Camera Roll Compatibility.
- *  It hijacks `ALAssetsGroup`'s `- enumerateAssetsUsingBlock:` if the `ALAssetsGroup`'s type is `ALAssetsGroupSavedPhoto` (a.k.a. former Camera Roll), then fallbacks using `PHAsset`.
- *  It does NOT do anything when OS version is lower than iOS7. (When Camera Roll is available.)
- */
 - (void)compat_enableCameraRoll {
     if ([self isiOS8OrGreater] == NO) { return; }
     

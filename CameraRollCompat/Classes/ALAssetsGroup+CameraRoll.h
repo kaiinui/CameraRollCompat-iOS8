@@ -8,11 +8,20 @@
 
 #import <AssetsLibrary/AssetsLibrary.h>
 
-#import <AssetsLibrary/AssetsLibrary.h>
-
 @interface ALAssetsGroup (CameraRoll)
 
+/**
+ *  `- enumerateAssetsUsingBlock:` which supports Camera Roll in iOS8.
+ *  It shoule be swizzled with original one.
+ */
 - (void)virtual_enumerateAssetsUsingBlock:(ALAssetsGroupEnumerationResultsBlock)enumerationBlock;
+
+/**
+ *  `- numberOfAssets` which supports Camera Roll in iOS8.
+ *  It should be swizzled with original one.
+ *
+ *  @return The number of assets contained in this `ALAssetsGroup`.
+ */
 - (NSInteger)virtual_numberOfAssets;
 
 @end
