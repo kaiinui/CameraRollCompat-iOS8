@@ -36,8 +36,7 @@
 }
 
 - (void)enumerateAllAssetsUsingBlock:(ALAssetsGroupEnumerationResultsBlock)enumerationBlock {
-    PHFetchResult *result = [PHAsset fetchAssetsWithOptions:nil];
-    [result enumerateObjectsUsingBlock:^(PHAsset *photoAsset, NSUInteger idx, BOOL *stop) {
+    [[self allAssets] enumerateObjectsUsingBlock:^(PHAsset *photoAsset, NSUInteger idx, BOOL *stop) {
         ALAsset *asset = (ALAsset *)photoAsset; // TODO: I know it is not good :/
         enumerationBlock(asset, idx, stop);
     }];

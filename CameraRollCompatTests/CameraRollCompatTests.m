@@ -1,40 +1,69 @@
-//
-//  CameraRollCompatTests.m
-//  CameraRollCompatTests
-//
-//  Created by kaiinui on 2014/09/26.
-//  Copyright (c) 2014年 kaiinui. All rights reserved.
-//
+#import <Specta.h>
+#define EXP_SHORTHAND
+#import <Expecta.h>
 
-#import <UIKit/UIKit.h>
-#import <XCTest/XCTest.h>
+#import "ALAssetsLibrary+CameraRoll.h"
 
-@interface CameraRollCompatTests : XCTestCase
+// THE TEST CODE SHOULD BE EXCUTED ON iOS8
 
-@end
+SpecBegin(ALAssetsLibrary)
 
-@implementation CameraRollCompatTests
+describe(@"ALAssetsLibrary + CameraRoll", ^{
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    [library compat_enableCameraRoll];
+    
+    describe(@"- enumerateAssetsUsingBlock", ^{
+        NSMutableArray *array = [[NSMutableArray alloc] init];
+        
+        pending(@"should enumerate all photos in the device", ^{
+            [library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+                if (group.numberOfAssets == 0) { return; }
+                
+                [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
+                    if (stop != nil) { return; }
+                    
+                    [array addObject:result];
+                }];
+            } failureBlock:NULL];
+            
+            expect(array.count).will.equal([PHAsset fetchAssetsWithOptions:nil].count);
+        });
+    });
+    
+    describe(@"- numberOfAssets", ^{
+        it(@"should get all photos in the device", ^{
+            __block NSInteger count = 0;
+            [library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+                if (group.numberOfAssets == 0) { return; }
+                
+                count = group.numberOfAssets;
+            } failureBlock:NULL];
+            
+            expect(count).will.equal([PHAsset fetchAssetsWithOptions:nil].count);
+        });
+    });
+});
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+describe(@"PHAsset", ^{
+    describe(@"- thumbnail", ^{
+        PHAsset *asset = [[PHAsset fetchAssetsWithOptions:nil] firstObject];
+        UIImage *image = [UIImage imageWithCGImage:asset.thumbnail];
+        
+        it(@"should be greater than 150x150", ^{
+            expect(image.size.width).to.beGreaterThan(150);
+            expect(image.size.height).to.beGreaterThan(150);
+        });
+    });
+    
+    describe(@"- aspectFitThumbnail", ^{
+        PHAsset *asset = [[PHAsset fetchAssetsWithOptions:nil] firstObject];
+        UIImage *image = [UIImage imageWithCGImage:asset.thumbnail];
+        
+        it(@"should be greater than 150x150", ^{
+            expect(image.size.width).to.beGreaterThan(150);
+            expect(image.size.height).to.beGreaterThan(150);
+        });
+    });
+});
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
-
-@end
+SpecEnd

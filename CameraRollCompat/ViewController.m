@@ -22,11 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    /*
     
     self.assets = [[NSMutableArray alloc] init];
     
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-    [library compat_enableCameraRoll];
     [library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
         NSLog(@"%d", group.numberOfAssets);
         if (group.numberOfAssets == 0) {
@@ -39,6 +39,7 @@
         }];
     } failureBlock:NULL];
     
+     */
     // Do any additional setup after loading the view, typically from a nib.
 }
 

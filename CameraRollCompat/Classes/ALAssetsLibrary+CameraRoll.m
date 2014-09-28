@@ -23,8 +23,10 @@
 # pragma mark - Helpers
 
 - (void)hijackAssetsGroup {
-    [ALAssetsGroup jr_swizzleMethod:@selector(enumerateAssetsUsingBlock:) withMethod:@selector(virtual_enumerateAssetsUsingBlock:) error:NULL];
-    [ALAssetsGroup jr_swizzleMethod:@selector(numberOfAssets) withMethod:@selector(virtual_numberOfAssets) error:NULL];
+    [ALAssetsGroup jr_swizzleMethod:@selector(enumerateAssetsUsingBlock:)
+                         withMethod:@selector(virtual_enumerateAssetsUsingBlock:) error:NULL];
+    [ALAssetsGroup jr_swizzleMethod:@selector(numberOfAssets)
+                         withMethod:@selector(virtual_numberOfAssets) error:NULL];
 }
 
 - (BOOL)isiOS8OrGreater {

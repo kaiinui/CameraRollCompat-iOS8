@@ -17,7 +17,7 @@
     PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
     options.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat; // To have resultHandler called only once.
     __weak typeof (self) weakSelf = self;
-    [[PHImageManager defaultManager] requestImageForAsset:self targetSize:CGSizeMake(150, 150) contentMode:PHImageContentModeDefault options:options resultHandler:^(UIImage *result, NSDictionary *info) {
+    [[PHImageManager defaultManager] requestImageForAsset:self targetSize:CGSizeMake(150, 150) contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage *result, NSDictionary *info) {
         weakSelf.thumbnailImage = result; // To Retain the UIImage.
         imageRef = [result CGImage];
     }];
